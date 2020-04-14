@@ -1,0 +1,28 @@
+<div class="bx--grid" style="margin-top:50px;">
+	<div class="bx--row">
+		<div class="bx--col">
+      <ibm-icon-home size="32"></ibm-icon-home>
+		</div>
+		<div class="bx--col">
+      <ibm-loading [overlay]="true" *ngIf="isLoading"></ibm-loading>
+			<h3>User List</h3>
+			<ibm-table [model]="usersModel" size="sm" [striped]="false" (sort)="customSort($event)"
+				[showSelectionColumn]="true">
+				<tbody>
+					<tr>
+						<td class="no-data" colspan="5">
+							<div>No data found.</div>
+						</td>
+					</tr>
+				</tbody>
+			</ibm-table>
+			<button ibmButton size="sm" (click)="getFirstComment()" style="margin-top:1rem;float:right">Get comments in the selected rows</button>
+		</div>
+		<div class="bx--col">
+		</div>
+	</div>
+</div>
+
+<ng-template #commentCellTmpl let-data="data.val">
+	<input ibmText [(ngModel)]="data" />
+</ng-template>

@@ -1,0 +1,13 @@
+<div class="bx--grid" style="margin-top:50px;">
+	<div class="bx--row">
+		<div class="bx--col">
+		</div>
+		<div class="bx--col">
+			<ibm-combo-box label="Full Name" placeholder="trigger search by pressing enter key" [items]="items" (selected)="onSelected(selectedItem)" (keydown.enter)="onEnter($event)">
+				<ibm-dropdown-list></ibm-dropdown-list>
+			</ibm-combo-box>
+		</div>
+		<div class="bx--col">
+		</div>
+	</div>
+</div>
