@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { map, mergeMap } from 'rxjs/operators';
+
+import { UserService } from '../shared/services';
+import { ListItem } from 'carbon-components-angular';
 
 @Component({
   selector: 'app-combobox',
@@ -6,10 +10,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./combobox.component.scss']
 })
 export class ComboboxComponent implements OnInit {
-
-  constructor() { }
+  items: Array<ListItem> = [];
 
   ngOnInit() {
+    this.items = [
+      {
+        content: 'Abacus',
+        selected: false
+      },
+      {
+        content: 'Byte',
+        selected: true,
+      },
+      {
+        content: 'Computer',
+        selected: false
+      },
+      {
+        content: 'Digital',
+        selected: false
+      }
+    ];
   }
 
+  constructor(private userService: UserService) { }
+
+  onEnter(e) {
+    // const keyword = e.target.classList.contains('bx--text-input') ? e.target.value.trim() : '';
+    // if (!keyword) {
+    //   return;
+    // }
+    // this.userService.getNames(keyword).subscribe(
+    //   res => {
+    //     const suggestions = [];
+    //     res.forEach(item => {
+    //       suggestions.push({ content: item.name });
+    //     });
+    //     this.items = suggestions;
+    //   },
+    //   err => {
+    //     console.log("HTTP Error", err);
+    //   }
+    // );
+  }
+
+  onSelected(selectedItem: ListItem) {
+    console.log(selectedItem);
+  }
 }
