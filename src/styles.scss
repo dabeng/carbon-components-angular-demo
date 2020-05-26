@@ -1,1 +1,11 @@
 @import "~carbon-components/scss/globals/scss/styles.scss";
+
+html, body {
+  height: 100%;
+}
+
+.bx--side-nav .bx--side-nav__link,
+.bx--side-nav__submenu:focus,
+a.bx--side-nav__link:focus {
+  outline: none;
+}

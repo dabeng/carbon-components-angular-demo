@@ -1,10 +1,36 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import {
+  Router,
+  ActivatedRoute,
+  Event,
+  NavigationStart,
+  NavigationEnd,
+  NavigationError
+} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'carbon-components-angular-demo';
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationStart) {
+        // Show loading indicator
+        console.log('entry into: ' + event.url);
+      }
+
+      if (event instanceof NavigationEnd) {
+        // Hide loading indicator
+      }
+
+      if (event instanceof NavigationError) {
+        // Hide loading indicator
+
+        // Present error to user
+        console.log(event.error);
+      }
+    });
+  }
 }
