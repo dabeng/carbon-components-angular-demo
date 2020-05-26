@@ -1,1 +1,0 @@
-# carbon-components-angular-demo
