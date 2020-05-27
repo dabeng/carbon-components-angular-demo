@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
-    "@carbon/icons-angular": "^11.0.1",
+    "@carbon/icons-angular": "^11.1.4",
     "carbon-components": "^10.12.0",
     "carbon-components-angular": "^4.2.12",
     "rxjs": "~6.4.0",

@@ -1,0 +1,46 @@
+<article class="demo-comments">
+  <p>
+    By default the carbon grid is 12 in large sizes, 8 in mid sizes, 4 in small sizes.
+  </p>
+  <p>With columnNumbers you set the size of the column, you have a grid of 12 by default, so if you set for example
+    <code>{{ '{' }} 'lg': 12, 'md': 8, 'sm': 4 {{ '}' }}</code>, that column will get all the available space on that
+    row, if you set two columns with
+    <code>columnNumbers="{{ '{' }} 'lg': 6, 'md': 4, 'sm': 2 {{ '}' }}"</code>, each column will have half the available
+    space on that row, etc…
+  </p>
+</article>
+<div ibmGrid>
+  <div ibmRow>
+    <div ibmCol [columnNumbers]="{'lg': 6, 'md': 4, 'sm': 12}">
+      <div class="inner">1 Column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 6, 'md': 4, 'sm': 12}">
+      <div class="inner">2 Column</div>
+    </div>
+  </div>
+  <div ibmRow>
+    <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 12}">
+      <div class="inner">1 Column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 12}">
+      <div class="inner">2 column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 4, 'md': 4, 'sm': 12}">
+      <div class="inner">3 Column</div>
+    </div>
+  </div>
+  <div ibmRow>
+    <div ibmCol [columnNumbers]="{'lg': 3, 'md': 4, 'sm': 12}">
+      <div class="inner">1 Column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 3, 'md': 4, 'sm': 12}">
+      <div class="inner">2 column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 3, 'md': 4, 'sm': 12}">
+      <div class="inner">3 Column</div>
+    </div>
+    <div ibmCol [columnNumbers]="{'lg': 3, 'md': 4, 'sm': 12}">
+      <div class="inner">4 Column</div>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CoreModule } from './core/core.module';
 
 import { HomeComponent } from './core/home/home.component';
+import { GridComponent } from './grid/grid.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './modal/modal.component';
 import { TileComponent } from './tile/tile.component';
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './core/not-found/not-found.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'grid', component: GridComponent },
   { path: 'table', component: TableComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'combobox', component: ComboboxComponent },

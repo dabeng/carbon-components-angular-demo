@@ -17,6 +17,7 @@ import { ComboboxComponent } from './combobox/combobox.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 import { TileComponent } from './tile/tile.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { TileComponent } from './tile/tile.component';
     ProgressIndicatorComponent,
     SideNavigationComponent,
     TileComponent,
+    GridComponent,
   ],
   providers: [
   ],

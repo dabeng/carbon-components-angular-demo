@@ -1,0 +1,15 @@
+.bx--row {
+  margin-bottom: 3rem;
+
+  [class^="bx--col"] {
+    background-color: #dbeaff;
+    outline: 1px dashed #97c1ff;
+
+    .inner {
+      background-color: #edf4ff;
+      min-height: 5rem;
+      font-size: 2rem;
+    }
+  }
+
+}
