@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 
+  isOpen = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openModal() {
+    this.isOpen = true;
+  }
+
+  closeModal() {
+    this.isOpen = false;
   }
 
 }

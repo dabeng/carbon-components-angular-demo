@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { ExpandableTile } from 'carbon-components-angular';
 
 @Component({
   selector: 'app-tile',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TileComponent implements OnInit {
 
+  @ViewChildren(ExpandableTile) tiles: QueryList<ExpandableTile>;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  adjustTilesHeight() {
+    setTimeout(() => this.tiles.toArray().forEach(item => item.updateMaxHeight()), 0);
   }
 
 }

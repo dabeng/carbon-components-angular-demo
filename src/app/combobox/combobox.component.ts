@@ -12,46 +12,27 @@ import { ListItem } from 'carbon-components-angular';
 export class ComboboxComponent implements OnInit {
   items: Array<ListItem> = [];
 
-  ngOnInit() {
-    this.items = [
-      {
-        content: 'Abacus',
-        selected: false
-      },
-      {
-        content: 'Byte',
-        selected: true,
-      },
-      {
-        content: 'Computer',
-        selected: false
-      },
-      {
-        content: 'Digital',
-        selected: false
-      }
-    ];
-  }
+  ngOnInit() {}
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   onEnter(e) {
-    // const keyword = e.target.classList.contains('bx--text-input') ? e.target.value.trim() : '';
-    // if (!keyword) {
-    //   return;
-    // }
-    // this.userService.getNames(keyword).subscribe(
-    //   res => {
-    //     const suggestions = [];
-    //     res.forEach(item => {
-    //       suggestions.push({ content: item.name });
-    //     });
-    //     this.items = suggestions;
-    //   },
-    //   err => {
-    //     console.log("HTTP Error", err);
-    //   }
-    // );
+    const keyword = e.target.classList.contains('bx--text-input') ? e.target.value.trim() : '';
+    if (!keyword) {
+      return;
+    }
+    this.userService.getNames(keyword).subscribe(
+      res => {
+        const suggestions = [];
+        res.forEach(item => {
+          suggestions.push({ content: item.name });
+        });
+        this.items = suggestions;
+      },
+      err => {
+        console.log('HTTP Error', err);
+      }
+    );
   }
 
   onSelected(selectedItem: ListItem) {

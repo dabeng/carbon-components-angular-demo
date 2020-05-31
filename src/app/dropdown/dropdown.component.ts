@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
+  items = [
+    { content: 'one' },
+    { content: 'two' },
+    { content: 'three' },
+    { content: 'four' }
+  ];
+
 
   constructor() { }
 
