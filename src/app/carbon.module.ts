@@ -27,6 +27,7 @@ import {
   DatePickerModule,
   ComboBoxModule,
   ModalModule,
+  PaginationModule,
 } from 'carbon-components-angular';
 
 @NgModule({
@@ -45,6 +46,7 @@ import {
     SearchModule,
     SelectModule,
     DialogModule,
+    PaginationModule,
     PlaceholderModule,
     TableModule,
     LoadingModule,
@@ -74,6 +76,7 @@ import {
     SearchModule,
     SelectModule,
     DialogModule,
+    PaginationModule,
     PlaceholderModule,
     TableModule,
     LoadingModule,

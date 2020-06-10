@@ -59,7 +59,7 @@ export class TableComponent implements OnInit {
     this.jsSkillsModel.data = [
       [
         new TableItem({
-          data: 'jQuery'
+          data: 'jQuery',id: 'jqqqqqqqqq'
         }),
         new TableItem({ data: 'The Write Less, Do More, JavaScript Library.' })
       ],

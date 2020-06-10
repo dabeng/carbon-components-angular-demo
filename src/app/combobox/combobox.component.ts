@@ -11,6 +11,7 @@ import { ListItem } from 'carbon-components-angular';
 })
 export class ComboboxComponent implements OnInit {
   items: Array<ListItem> = [];
+  nameModel = {content: ''};
 
   ngOnInit() {}
 
@@ -37,5 +38,10 @@ export class ComboboxComponent implements OnInit {
 
   onSelected(selectedItem: ListItem) {
     console.log(selectedItem);
+  }
+
+  clearupName() {
+    this.nameModel = {content: ''};
+    (document.querySelector('.bx--text-input') as HTMLInputElement).value = ''; // trick code
   }
 }

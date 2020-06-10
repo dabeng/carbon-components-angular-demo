@@ -1,6 +1,7 @@
 @import "~carbon-components/scss/globals/scss/styles.scss";
 
-html, body {
+html,
+body {
   height: 100%;
   font-size: 16px;
 }
@@ -16,4 +17,33 @@ a.bx--side-nav__link:focus {
   background-color: #eee;
   padding: 1rem;
   line-height: 2rem;
+}
+
+.demo-list {
+  counter-reset: demoCounter;
+
+  .one-demo {
+    padding: 1rem 0;
+
+    &::before {
+      counter-increment: demoCounter;
+      content: counter(demoCounter);
+      position: absolute;
+      box-sizing: border-box;
+      background-color: #d9534f;
+      color: #fff;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0 0 4rem 0;
+      width: 2rem;
+      height: 2rem;
+      left: 0;
+    }
+    
+    .warnning {
+      color: #d9534f;
+    }
+    
+  }
 }

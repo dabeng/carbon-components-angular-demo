@@ -18,6 +18,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 import { TileComponent } from './tile/tile.component';
 import { GridComponent } from './grid/grid.component';
+import { SearchComponent } from './search/search.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   imports: [
@@ -40,6 +42,8 @@ import { GridComponent } from './grid/grid.component';
     SideNavigationComponent,
     TileComponent,
     GridComponent,
+    SearchComponent,
+    PaginationComponent,
   ],
   providers: [
   ],

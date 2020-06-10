@@ -21,7 +21,7 @@
     "@angular/router": "~8.0.0",
     "@carbon/icons-angular": "^11.1.4",
     "carbon-components": "^10.12.0",
-    "carbon-components-angular": "^4.2.12",
+    "carbon-components-angular": "^4.6.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

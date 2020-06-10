@@ -1,12 +1,15 @@
-<div ibmGrid>
-	<div ibmRow>
+<div ibmGrid class="demo-list">
+	<div ibmRow class="one-demo">
 		<div ibmCol [columnNumbers]="{'lg': 6, 'md': 4, 'sm': 12}">
-			<ibm-combo-box label="Full Name" helperText="trigger search by pressing enter key" placeholder="Please select user name" [items]="items"
-				(selected)="onSelected(selectedItem)" (keydown.enter)="onEnter($event)">
+			<ibm-combo-box size="sm" label="Full Name" helperText="trigger search by pressing enter key" placeholder="Please select user name" [items]="items"
+				(selected)="onSelected($event)" (keydown.enter)="onEnter($event)" [(ngModel)]="nameModel">
 				<ibm-dropdown-list></ibm-dropdown-list>
 			</ibm-combo-box>
+			<p>model: {{nameModel | json}}</p>
+			<button ibmButton="primary" (click)="clearupName()">Clear Selection</button>
 		</div>
 		<div ibmCol [columnNumbers]="{'lg': 6, 'md': 4, 'sm': 12}">
+			<h4>Clear combobox with ngModel</h4>
 			<p class="description">
         Our combobox control loads remote data with http requets. So maybe you need to wait a little bit longer to see the search results.
       </p>
